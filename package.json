@@ -1,0 +1,69 @@
+{
+    "name": "@USER/REPO",
+    "version": "0.0.0",
+    "description": "about",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/USER/REPO.git"
+    },
+    "keywords": [
+        "react",
+        "react-native",
+        "image",
+        "gallery",
+        "image-gallery",
+        "image-viewer"
+    ],
+    "scripts": {
+        "prebuild": "npm run clean",
+        "build": "tsc --declaration",
+        "clean": "rm -rf ./dist",
+        "semantic-release": "semantic-release",
+        "commit": "git-cz"
+    },
+    "peerDependencies": {
+        "react": ">=16.11.0",
+        "react-native": ">=0.61.3"
+    },
+    "files": [
+        "dist",
+        "readme.md",
+        "package.json"
+    ],
+    "author": "Chad Jepity",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/USER/REPO/issues"
+    },
+    "homepage": "https://github.com/USER/REPO#readme",
+    "devDependencies": {
+        "@babel/runtime": "7.7.4",
+        "@types/react": "18.2.37",
+        "@types/react-native": "^0.72",
+        "commitizen": "^4.3.0",
+        "cz-conventional-changelog": "^3.3.0",
+        "eslint": "^8.35.0",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "prettier": "^2.8.4",
+        "react": "18.2.0",
+        "react-native": "^0.72",
+        "semantic-release": "^22.0.12",
+        "typescript": "^4.8"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "release": {
+        "branches": [
+            "master"
+        ]
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    }
+}
